@@ -30,3 +30,5 @@ when one racer wins, a pop up of the racer will show up saying he won the race.
  day 5: debugs
 
 ## Links and Resources
+### hero api from marvel:
+https://developer.marvel.com/documentation/authorization

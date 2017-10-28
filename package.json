@@ -1,0 +1,31 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "super hero app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellsaur/project2.git"
+  },
+  "author": "Marco Acosta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hellsaur/project2/issues"
+  },
+  "homepage": "https://github.com/hellsaur/project2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "js-md5": "^0.6.1",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "node-fetch": "^1.7.3",
+    "pg-promise": "^7.0.3"
+  }
+}
