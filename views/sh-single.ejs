@@ -1,0 +1,20 @@
+<% include ./partials/boilerplate %>
+
+<h1>single page</h1>
+
+  <div class="sh">
+    <h3><%= superhero.city %></h3>
+    <p><%= superhero.country %></p>
+    <div class="meta">
+      <span class="city"><%= superhero.city %></span>
+      <span class="country"><%= superhero.country %></span>
+    </div>
+      <a href="/superhero/<%=superhero.id%>/edit">Edit</a>
+      <form method="POST" action="/superhero/<%=superhero.id%>?_method=DELETE">
+        <input type="submit" value="Delete" />
+      </form>
+    </div>
+    <a class="button" href="/superhero"> Back to list </a>
+  </div>
+
+<% include ./partials/end %>

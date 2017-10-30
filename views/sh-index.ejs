@@ -1,0 +1,11 @@
+<% include ./partials/boilerplate %>
+<!-- <form class="container">
+  <input type="text" name="name" placeholder="Superhero Na`me" />
+  <input class="button" type="submit" value="Add it!" />
+</form> -->
+  <span>Name:</span> <%= superheroes.data.results[0].name %><br>
+  <span>Summary:</span> <%= superheroes.data.results[0].description %></br>
+  <img src="<%= superheroes.data.results[0].thumbnail.path + "."+ superheroes.data.results[0].thumbnail.extension  %>">
+
+
+<% include ./partials/end %>
