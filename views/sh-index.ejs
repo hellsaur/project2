@@ -1,11 +1,13 @@
 <% include ./partials/boilerplate %>
-<!-- <form class="container">
-  <input type="text" name="name" placeholder="Superhero Na`me" />
-  <input class="button" type="submit" value="Add it!" />
-</form> -->
-  <span>Name:</span> <%= superheroes.data.results[0].name %><br>
-  <span>Summary:</span> <%= superheroes.data.results[0].description %></br>
-  <img src="<%= superheroes.data.results[0].thumbnail.path + "."+ superheroes.data.results[0].thumbnail.extension  %>">
 
+
+<form class="container" action="/superhero" method="POST">
+  <input class="search" type="text" name="name" placeholder="Superhero Name" />
+<button class="button1"type="submit">Add Hero</button>
+</form>
+
+<div id="text2"><%= name %></div>
+<div id="text3"><%= description %></div>
+<img id="img" src="<%= thumbnail %>">
 
 <% include ./partials/end %>

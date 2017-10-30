@@ -4,8 +4,8 @@ const superheroRoutes = express.Router();
 const superheroController = require('../controllers/sh-controller');
 const hero = require('../services/hero-helper');
 
-superheroRoutes.get('/', hero.makeRequest, superheroController.index);
-// superheroRoutes.get('/', superheroController.index);
+superheroRoutes.post('/', hero.makeRequest, superheroController.index);
+superheroRoutes.get('/', superheroController.index);
 
 superheroRoutes.get('/location', (req, res) => {
   res.render('location');

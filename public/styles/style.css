@@ -6,7 +6,8 @@ ul {
     list-style-type: none;
     padding: 0;
     overflow: hidden;
-    background-color: blue;
+    background-color: rgba(0,0,0,0.5);
+    color:red;
 
 }
 
@@ -19,11 +20,12 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    color:red;
 }
 
 li a:hover {
-    background-color: black;
-    color:white;
+    background-color:white;
+
 }
 
 
@@ -32,7 +34,7 @@ footer{
   top:90%;
   width: 100%;
   height: 100px;
-  background-color:blue;
+  background-color:black;
 }
 #aa{
   text-decoration: none;
@@ -47,9 +49,11 @@ footer{
   border: 2px solid black;
   border-radius: 20px;
   transition: 0.3s;
-  padding: 10px;
-  top:50%;
+  padding: 5px;
+  top: 50%;
   left:45%;
+
+
 
   text-decoration: none;
 }
@@ -61,11 +65,79 @@ footer{
   color: white;
 
 }
+.button1{
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  color:red;
+  margin:5px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  transition: 0.3s;
+  padding: 5px;
+  left: 45%;
+}
+.button1:hover{
+  cursor:pointer;
+  transform: scale(1.3);
+  transition: 0.3s;
+  background-color: red;
+  color: white;
 
+}
 #text{
   position: absolute;
   top:30%;
   font-size: 130px;
-font-family: 'Permanent Marker', cursive;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
 
+}
+.info{
+  text-align: center;
+  font-family: Futura;
+  font-size: 25px;
+  color:white;
+}
+
+span{
+  color:red;
+}
+body{
+  background-color:black;
+}
+#img{
+  position: absolute;
+  top: 40%;
+  left:20%;
+  transform: rotateX(-50%)translateY(-50%);
+}
+#text2{
+  color: white;
+  text-align: center;
+  position: absolute;
+  font-size: 40px;
+  top:20%;
+  left:40%;
+  transform: rotateX(-50%)translateY(-50%);
+}
+#text3{
+  color: white;
+  text-align: center;
+  position: absolute;
+  font-size: 20px;
+  top:30%;
+  transform: rotateX(-50%)translateY(-50%);
+}
+
+
+.search{
+  background-color: lightblue;
+  position: absolute;
+  height:30px;
+  border:2px solid red;
+  left: 42%;
+  top: 10%;
+  padding: 5px;
 }

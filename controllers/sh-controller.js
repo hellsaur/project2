@@ -2,28 +2,30 @@ const Superhero = require('../models/Superhero');
 
 const superheroController = {};
 
-superheroController.index = (req, res) => {
+superheroController.fetch = (req, res) => {
     res.render('../views/sh-index',{
-      name: res.locals.name,
-      description:res.locals.description,
-      thumbnail: res.locals.thumbnail,
+
       superheroes: res.locals.superheroes
     });
 }
-// superheroController.index = (req, res) => {
-//   Superhero.findAll()
-//   .then(superhero => {
-//     res.json('views/sh-index', {
-//       superhero: superhero,
-//       name: res.locals.name,
-//       description:res.locals.description,
-//       thumbnail: res.locals.thumbnail,
-//     });
-//   }).catch(err => {
-//     console.log(err)
-//     res.status(500).json(err);
-//   });
-// };
+superheroController.index = (req,res) =>{
+  console.log(res.locals.name, res.locals.description, res.locals.thumbnail)
+  res.render('sh-index', {
+    name: res.locals.name,
+    description:res.locals.description,
+    thumbnail: res.locals.thumbnail
+  })
+  // Superhero.findAll()
+  // .then(superhero => {
+  //   console.log(superhero);
+  //   res.render('sh-index', {
+  //     superheroes: superhero,
+  //   });
+  // }).catch(err => {
+  //   console.log(err);
+  //   res.status(500).json(err);
+  // });
+};
 
 superheroController.show = (req,res) => {
   Superhero.findById(req.params.id)
