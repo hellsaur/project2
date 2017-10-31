@@ -1,0 +1,24 @@
+<% include ./partials/boilerplate %>
+
+<div class="container">
+
+      <div class="sh">
+      <span>city:</span> <%= superhero.city %><br>
+      <span>country:</span> <%= superhero.country %><br>
+      <span>name:</span> <%= name %><br>
+      <span>Description:</span> <%= description %></br>
+      <span>Completed: </span> <%= thumbnail %></br>
+      <form class="delete" action="/list/<%= superhero.id%>?_method=DELETE" method="POST">
+        <button class="button" type="submit">delete</button></form>
+        <a class="button" href="/list/<%= superhero.id%>/edit">edit</a></form>
+
+        <a class="button" href="/list/<%= superhero.id%>">info</a>
+
+
+      </div>
+
+  
+  </div>
+
+
+<% include ./partials/end %>

@@ -1,11 +1,11 @@
 <% include ./partials/boilerplate %>
 
-<form method = "POST" action="/location">
+<form method = "POST" action="/list">
 	<input type="text" name = "city" placeholder="City" />
       <input type="text" name = "country" placeholder="Country" />
-      <input type = "submit" value = "Add it!">
+      <button class="button1"type="submit">Find Hero</button>
 </form>
 
-<a href="/superhero">Back to lists</a>
+<a href="/list">Back to lists</a>
 
 <% include ./partials/end %>

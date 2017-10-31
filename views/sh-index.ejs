@@ -3,11 +3,11 @@
 
 <form class="container" action="/superhero" method="POST">
   <input class="search" type="text" name="name" placeholder="Superhero Name" />
-<button class="button1"type="submit">Add Hero</button>
+<button class="button1"type="submit">Find Hero</button>
 </form>
 
 <div id="text2"><%= name %></div>
 <div id="text3"><%= description %></div>
-<img id="img" src="<%= thumbnail %>">
+<img id="img" src="<%= thumbnail %>" height="400" width="400">
 
 <% include ./partials/end %>

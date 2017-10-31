@@ -15,6 +15,10 @@ superheroRoutes.get('/add', (req, res) => {
   res.render('sh-add');
 })
 
+superheroRoutes.get('/list', (req, res) => {
+  res.render('sh-list');
+})
+
 
 superheroRoutes.get('/:id', superheroController.show);
 superheroRoutes.post('/', superheroController.create);

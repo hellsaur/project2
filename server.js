@@ -39,5 +39,5 @@ const superheroRoutes = require('./routes/sh-routes');
 app.use('/superhero',superheroRoutes);
 
 app.use('*', (req, res)=> {
-   res.status(404).send('You Messed Up')
+   res.status(404).send('404 Not Found')
 });

@@ -2,13 +2,13 @@
 
 <div class="myForm">
   <div class="edit">
-    <form method="POST" action='/superhero/<%= superhero.id%>?_method=PUT'>
+    <form method="POST" action='/list/<%= superhero.id%>?_method=PUT'>
       <input type="text" name="city" placeholder="City" value="<%= superhero.city %>" />
       <input type="text" name="country" placeholder="Country" value="<%= superhero.country %>" />
       <input class="button" type="submit" value="Edit it!" />
     </div>
   </form>
 
-  <a href="/superhero/<%=superhero.id %>">Back to list</a>
+  <a href="/superhero/list/<%=superhero.id %>">Back to list</a>
 </div>
 <% include ./partials/end %>
