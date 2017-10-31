@@ -10,4 +10,12 @@
 <div id="text3"><%= description %></div>
 <img id="img" src="<%= thumbnail %>" height="400" width="400">
 
+<form class="" method="POST" action="/superhero/list">
+	<input type="hidden" value="<%= name%>" name="name" />
+	<input type="hidden" value="<%= description%>" name="description" />
+  <input type="hidden" value="<%= thumbnail%>" name="thumbnail" />
+	<!-- etc -->
+	<input class="button3" type="submit" value="Add!" />
+</form>
+
 <% include ./partials/end %>

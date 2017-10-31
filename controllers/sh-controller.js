@@ -2,30 +2,26 @@ const Superhero = require('../models/Superhero');
 
 const superheroController = {};
 
-superheroController.fetch = (req, res) => {
-    res.render('../views/sh-index',{
-
-      superheroes: res.locals.superheroes
-    });
-}
 superheroController.index = (req,res) =>{
   console.log(res.locals.name, res.locals.description, res.locals.thumbnail)
   res.render('sh-index', {
     name: res.locals.name,
     description:res.locals.description,
     thumbnail: res.locals.thumbnail
-  })
-  // Superhero.findAll()
-  // .then(superhero => {
-  //   console.log(superhero);
-  //   res.render('sh-index', {
-  //     superheroes: superhero,
-  //   });
-  // }).catch(err => {
-  //   console.log(err);
-  //   res.status(500).json(err);
-  // });
+  });
 };
+
+ superheroController.list = (req, res) => {
+   Superhero.findAll()
+   .then(superhero => {
+     console.log(superhero);
+     res.render('sh-list', {superhero});
+   }).catch(err => {
+     console.log(err);
+     res.status(500).json(err);
+   });
+ }
+
 
 superheroController.show = (req,res) => {
   Superhero.findById(req.params.id)
@@ -40,11 +36,15 @@ superheroController.show = (req,res) => {
 };
 
 superheroController.create = (req, res) => {
+  console.log(req.body);
   Superhero.create({
-    city: req.body.city,
-    country: req.body.country,
+      city: req.body.city,
+      country: req.body.country,
+      name: req.body.name,
+      description:req.body.description,
+      thumbnail: req.body.thumbnail
   }).then((superhero) => {
-    res.redirect(`/superhero/${superhero.id}`)
+    res.redirect('/superhero/list')
   }).catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -55,6 +55,10 @@ superheroController.update = (req, res) => {
   Superhero.update({
     city: req.body.city,
     country: req.body.country,
+    name: req.body.name,
+    description:req.body.description,
+    thumbnail: req.body.thumbnail
+
   },req.params.id)
   .then((superhero) => {
     res.redirect(`/superhero/${superhero.id}`)

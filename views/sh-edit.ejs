@@ -2,10 +2,15 @@
 
 <div class="myForm">
   <div class="edit">
-    <form method="POST" action='/list/<%= superhero.id%>?_method=PUT'>
+    <form method="POST" action='/superhero/<%= superhero.id%>?_method=PUT'>
       <input type="text" name="city" placeholder="City" value="<%= superhero.city %>" />
       <input type="text" name="country" placeholder="Country" value="<%= superhero.country %>" />
-      <input class="button" type="submit" value="Edit it!" />
+      <input type="text" name="name" placeholder="Heroname" value="<%= superhero.name %>" />
+      <input type="text" name="description" placeholder="Description" value="<%= superhero.description %>" />
+      <input type="text" name="thumbnail" placeholder="img" value="<%= superhero.thumbnail %>" />
+
+
+      <input class="button" type="submit" value="Save" />
     </div>
   </form>
 

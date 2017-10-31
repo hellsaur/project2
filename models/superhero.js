@@ -17,11 +17,14 @@ Superhero.create = (superhero) => {
   return db.one(`
 INSERT INTO locations (
   city,
-  country)
+  country,
+  name,
+  description,
+  thumbnail)
   VALUES(
-  $1,$2
+  $1,$2,$3,$4,$5
 ) RETURNING *`,
-[superhero.city, superhero.country]);
+[superhero.city, superhero.country, superhero.name, superhero.description, superhero.thumbnail]);
 
 }
 
@@ -29,11 +32,14 @@ Superhero.update = (superhero, id) => {
     return db.none(`
       UPDATE locations SET
       city=$1,
-      country=$2
+      country=$2,
+      name=$3,
+      description=$4,
+      thumbnail=$5
       WHERE
-      id=$3
+      id=$6
       RETURNING *`,
-        [superhero.city, superhero.country, id]);
+        [superhero.city, superhero.country,superhero.name, superhero.description, superhero.thumbnail, id]);
 
 }
 

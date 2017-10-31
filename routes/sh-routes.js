@@ -6,6 +6,7 @@ const hero = require('../services/hero-helper');
 
 superheroRoutes.post('/', hero.makeRequest, superheroController.index);
 superheroRoutes.get('/', superheroController.index);
+superheroRoutes.get('/list', superheroController.list);
 
 superheroRoutes.get('/location', (req, res) => {
   res.render('location');
@@ -15,13 +16,10 @@ superheroRoutes.get('/add', (req, res) => {
   res.render('sh-add');
 })
 
-superheroRoutes.get('/list', (req, res) => {
-  res.render('sh-list');
-})
 
 
 superheroRoutes.get('/:id', superheroController.show);
-superheroRoutes.post('/', superheroController.create);
+superheroRoutes.post('/list', superheroController.create);
 superheroRoutes.get('/:id/edit', superheroController.edit);
 superheroRoutes.put('/:id', superheroController.update);
 superheroRoutes.delete('/:id', superheroController.delete);

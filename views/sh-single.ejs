@@ -1,6 +1,5 @@
 <% include ./partials/boilerplate %>
 
-<h1>single page</h1>
 
   <div class="sh">
     <h3><%= superhero.city %></h3>
@@ -14,7 +13,9 @@
         <input type="submit" value="Delete" />
       </form>
     </div>
-    <a class="button" href="/superhero"> Back to list </a>
+    <form method="GET" action="/superhero/list/">
+      <input type="submit" value="back to list" />
+    </form>
   </div>
 
 <% include ./partials/end %>

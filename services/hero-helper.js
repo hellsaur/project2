@@ -6,7 +6,7 @@ require('dotenv').config()
 const md5 = require('js-md5');
 
 
-//                      V req, res,next
+
 function makeRequest(req, res, next) {
   console.log(req.body.name)
   const name = req.body.name
@@ -14,7 +14,7 @@ function makeRequest(req, res, next) {
   const pubKey = process.env.MARVEL_PUBLIC_KEY
   const privKey = process.env.MARVEL_PRIVATE_KEY
   const hash = md5(ts + privKey + pubKey)
-                //                                              V req.body.name or something
+
   fetch(`http://gateway.marvel.com/v1/public/characters?name=${name}&ts=${ts}&apikey=${pubKey}&hash=${hash}`)
   .then(res => res.json())
   .then(jsonRes => {
