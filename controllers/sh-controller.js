@@ -24,8 +24,8 @@ superheroController.index = (req,res) =>{
  }
 
  superheroController.show = (req,res) => {
-  const locQuery = superhero.findById(req.params.id)
-  const heroQuery = superheroes.findById(req.params.id)
+  const locQuery = Superhero.findById(req.params.id)
+  const heroQuery = Superheroes.findById(req.params.id)
   Promise.all([locQuery, heroQuery])
   .then(promises => {
      const location = promises[0]
@@ -77,7 +77,8 @@ superheroController.update = (req, res) => {
 
   },req.params.id)
   .then((superhero) => {
-    res.redirect(`/superhero/${superhero.id}`)
+    console.log('resdfsd')
+    res.redirect('/superhero/list')
   }).catch(err => {
     console.log(err);
     res.status(500).json(err)

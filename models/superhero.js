@@ -29,7 +29,7 @@ INSERT INTO locations (
 }
 
 Superhero.update = (superhero, id) => {
-    return db.none(`
+    return db.one(`
       UPDATE locations SET
       city=$1,
       country=$2,
