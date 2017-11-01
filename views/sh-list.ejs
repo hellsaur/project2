@@ -1,22 +1,24 @@
 <% include ./partials/boilerplate %>
-<div class="container">
+<div class="container1">
       <% superhero.forEach(superhero => { %>
-      <div class="todo">
-      <br><br><span>Place:</span> <%= superhero.city %><br>
-      <span>Area:</span> <%= superhero.country %></br><br><br>
-      <span>Heroname:</span> <%= superhero.name %></br><br><br>
-      <span>Description:</span> <%= superhero.description %></br><br><br>
-      <img src="<%= superhero.thumbnail %>"</br><br><br>
+      <div class="">
+        <div class="name"><br><br> <%= superhero.name %></br><br><br></div>
+        <div class="city"><span>Last Sighted:</span><br> <%= superhero.city %><br></div>
+        <div class="country"><span>Region:</span><br> <%= superhero.country %></br><br><br></div>
+        <img id="image" src="<%= superhero.thumbnail %>" height="400" width="400"></br><br><br>
+
+      <!-- <div class="text"><span>Description:</span><br> <%= superhero.description %></br><br><br></div> -->
 
 
 
+<div class="buttone">
       <form class="delete" action="/superhero/<%= superhero.id%>?_method=DELETE" method="POST">
-        <button class="button2" type="submit">delete</button></form>
+        <button class="btn" type="submit">delete</button></form>
 
 
         <form class="edit" action="/superhero/<%= superhero.id%>?_method=PUT" method="POST">
-        <a class="button2" href="/superhero/<%= superhero.id%>/edit">edit</a></form>
-
+        <a class="btn2" href="/superhero/<%= superhero.id%>/edit">location</a></form>
+</div>
       </div>
 
       <% }) %>

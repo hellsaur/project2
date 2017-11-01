@@ -1,4 +1,5 @@
 const Superhero = require('../models/Superhero');
+const Superheroes = require('../models/Superheroes');
 
 const superheroController = {};
 
@@ -22,18 +23,33 @@ superheroController.index = (req,res) =>{
    });
  }
 
-
-superheroController.show = (req,res) => {
-  Superhero.findById(req.params.id)
-  .then(superhero => {
-    res.render('sh-single', {
-      superhero:  superhero,
-    });
+ superheroController.show = (req,res) => {
+  const locQuery = superhero.findById(req.params.id)
+  const heroQuery = superheroes.findById(req.params.id)
+  Promise.all([locQuery, heroQuery])
+  .then(promises => {
+     const location = promises[0]
+     const hero = promises[1]
+     res.render('location/show', {
+       superhero: superhero,
+       superheroes:superheroes
+     });
   }).catch(err => {
     console.log(err);
     res.status(500).json(err);
-  });
-};
+  })
+ };
+// superheroController.show = (req,res) => {
+//   Superhero.findById(req.params.id)
+//   .then(superhero => {
+//     res.render('sh-single', {
+//       superhero:  superhero,
+//     });
+//   }).catch(err => {
+//     console.log(err);
+//     res.status(500).json(err);
+//   });
+// };
 
 superheroController.create = (req, res) => {
   console.log(req.body);

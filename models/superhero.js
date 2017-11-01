@@ -42,7 +42,12 @@ Superhero.update = (superhero, id) => {
         [superhero.city, superhero.country,superhero.name, superhero.description, superhero.thumbnail, id]);
 
 }
-
+// Superhero.findSightings = (name) => {
+//   return db.manyOrNone(`
+//     SELECT * FROM locations
+//     WHERE name = $1
+//   `, [name]);
+// }
 
 Superhero.destroy = id =>
 db.none(`DELETE FROM locations WHERE id = $1`, id)
