@@ -3,8 +3,8 @@
 <div class="myForm">
   <div class="edit">
     <form method="POST" action='/superhero/<%= superhero.id%>?_method=PUT'>
-      <input id="input" type="text" name="city" placeholder="City" value="<%= superhero.city %>" /><br>
-      <input id="input" type="text" name="country" placeholder="Country" value="<%= superhero.country %>" /><br>
+      <input id="input" type= "<span>text</span>" name="city" placeholder="Last Sighted" value="<%= superhero.city %>" /><br>
+      <input id="input" type="text" name="country" placeholder="Region" value="<%= superhero.country %>" /><br>
       <input id="input" type="text" name="name" placeholder="Heroname" value="<%= superhero.name %>" /><br>
       <input id="input" type="text" name="description" placeholder="Description" value="<%= superhero.description %>" /><br>
       <input id="input" type="text" name="thumbnail" placeholder="img" value="<%= superhero.thumbnail %>" /><br>
@@ -14,6 +14,6 @@
     </div>
   </form>
 
-  <a class="boton" href="/superhero/list/<%=superhero.id %>">Back to list</a>
+  <a class="boton" href="/superhero/list/">Back to list</a>
 </div>
 <% include ./partials/end %>

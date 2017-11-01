@@ -33,14 +33,34 @@ li a:hover {
 
 
 footer{
-  position:fixed;
-  top:90%;
+
   width: 100%;
-  height: 100px;
+  height: 50px;
   background-color:black;
+  font-family: monospace;
+  color: white;
 }
+.spiderman{
+
+}
+
 #aa{
   text-decoration: none;
+  font-family: futura;
+}
+
+#logo{
+  position: absolute;
+  top:20%;
+  left:35%;
+}
+
+#aa:hover{
+  cursor:pointer;
+  transform: scale(1.3);
+  transition: 0.3s;
+  background-color: red;
+  color: white;
 }
 .button{
   position: absolute;
@@ -73,7 +93,7 @@ footer{
 }
 .button1{
   position: absolute;
-  width: 80px;
+  width: 100px;
   height: 30px;
   color:red;
   margin:10px 10px;
@@ -96,7 +116,7 @@ footer{
 }
 .button3{
   position: absolute;
-  width: 80px;
+  width: 100px;
   height: 30px;
   color:red;
   margin:10px 10px;
@@ -125,25 +145,28 @@ footer{
   color: white;
   font-family: serif;
   text-shadow: 3px 3px 4px red;
-
-
+}
+.name:hover{
+  cursor:pointer;
+  transform: scale(1.3);
+  transition: 0.3s;
+  color: red;
+  text-shadow: 3px 3px 4px white;
 }
 
 .city{
-  text-align: center;
   position: absolute;
   left:60%;
-  margin-top: 150px;
+  margin-top: 200px;
   font-size: 40px;
   color: white;
   font-family: serif;
 
 }
 .country{
-  text-align: center;
   position: absolute;
   left:60%;
-  margin-top: 250px;
+  margin-top: 300px;
   font-size: 40px;
   color: white;
   font-family: serif;
@@ -162,12 +185,21 @@ footer{
 
 #input{
   color: white;
+  border-radius: 20px;
   text-align: center;
   font-size: 50px;
-  border: 5px solid white;
-  margin: 15px;
-
+  border: 5px solid red;
+  padding: 5px;
+  margin: 5px;
 }
+#input:hover{
+  cursor:pointer;
+  transform: scale(1.3);
+  transition: 0.3s;
+  background-color: red;
+  color: white;
+}
+
 .boton{
   text-align: center;
   text-decoration: none;
@@ -175,6 +207,7 @@ footer{
   width: 100px;
   height: 50px;
   margin:5px;
+  padding-top:15px;
   background-color: white;
   border-radius: 20px;
   transition: 0.3s;
@@ -249,11 +282,7 @@ text-align: center;
 }
 
 
-#logo{
-  position: absolute;
-  top:20%;
-  left:35%;
-}
+
 .info{
   text-align: center;
   font-family: Futura;
@@ -266,8 +295,9 @@ span{
 }
 body{
   background-color:black;
+  background-size: cover;
   overflow-x: hidden;
-  overflow-y: auto;
+
 
 }
 #img{
