@@ -10,7 +10,7 @@ this app is about where to find the last location of your favorite super hero.
 
 ## Wireframe
 https://drive.google.com/open?id=0B6TZXvKSDHTWZnhJVnhEM0l5bG8
-
+1. overtime i changed the way my Wireframe was from day one. 
 ## Initial thoughts on game structure
 
 My idea is to use a superhero api so i can have all superheroes there are and make an edit in one of my views where the user can find a super hero and type in the last location he/she saw that particular superhero last. Also add a list of superheroes that people have sighted with a location button where the user can input the location where they saw that particular superhero.
@@ -19,11 +19,12 @@ My idea is to use a superhero api so i can have all superheroes there are and ma
 ## Phases of Completion
 
 
- day 1: pseudocode + api functionality.
+ ### day 1: pseudocode + api functionality.
+  1. getting API to work was probably the hardest thing in this project for me. It took me 1 day to figure out.
 
  day 2: folders setup
 
- day 3: routes + controllers
+ day 3: routes + controllers:
 
  day 4:views
 
